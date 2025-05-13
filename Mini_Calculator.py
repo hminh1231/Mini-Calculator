@@ -1,12 +1,12 @@
 class Calculator:
     def print_menu(self):
         '''This function will print out menu of calculator'''
-        print('Máy tính thu nhỏ')
-        print('1. Phép cộng')
-        print('2. Phép trừ')
-        print('3. Phép nhân')
-        print('4. Phép chia')
-        print('5. Thoát ứng dụng')
+        print('Mini Calculator')
+        print('1. Sum')
+        print('2. Minus')
+        print('3. Multiply')
+        print('4. Divide')
+        print('5. Exit')
         
     def sum(self,num1,num2):
         '''This function will return sum of 2 numbers'''
@@ -37,27 +37,27 @@ class Calculator:
         while True:
             while True:
                 try:
-                    option = int(input('Lựa chọn của bạn là gì: '))
+                    option = int(input('What is your choice: '))
                     break
                 except ValueError:
-                    print('Lựa chọn của bạn không hợp lệ, vui lòng chọn lại')
+                    print('Your choice is not valid, please try again.')
                     continue
             if option == 5:
                 exit = False
                 break
             while True:
                 try:
-                    num1 = int(input('Mời bạn nhập số đầu tiên: '))
+                    num1 = int(input('Please enter the first number: '))
                     break
                 except:
-                    print('Lựa chọn của bạn không phù hợp, vui lòng chọn lại')
+                    print('Your choice is invalid, please try again')
                     continue
             while True:
                 try:
-                    num2 = int(input('Mời bạn nhập số thứ hai: '))
+                    num2 = int(input('Please enter the second number: '))
                     break
                 except ValueError:
-                    print('Lựa chọn của bạn không phù hợp, vui lòng chọn lại')
+                    print('Your choice is invalid, please try again')
                     continue
             if option == 1:
                 print(self.sum(num1,num2))
